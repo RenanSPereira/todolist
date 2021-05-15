@@ -1,3 +1,6 @@
 # diretórios python
 /venv
 __pycache__/
+
+#banco de dados
+todo.db
