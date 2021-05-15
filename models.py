@@ -1,5 +1,4 @@
-from app import db
-
+from database import db
 
 class Todo(db.Model):
     id = db.Column(db.Integer, primary_key=True)
