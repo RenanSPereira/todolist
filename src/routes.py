@@ -15,5 +15,12 @@ def configure(app):
         db.session.add(todo)
         db.session.commit()
         return redirect(url_for('index'))
+    
+    @app.route('/remove/<id>')
+    def remove(id):
+        todo = Todo.query.filter_by(id=int(id)).first()
+        db.session.delete(todo)
+        db.session.commit()
+        return redirect(url_for('index'))
 
     return app    
