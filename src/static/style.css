@@ -44,3 +44,7 @@ body {
   a:hover {
     color: rgb(240, 69, 69);
   }
+
+  footer {
+    font-size: 1rem;
+  }
