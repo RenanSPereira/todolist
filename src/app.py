@@ -1,7 +1,7 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
-import routes
-import database
+from src import routes
+from src import database
 
 def create_app():
     app = Flask(__name__)
@@ -9,5 +9,4 @@ def create_app():
     database.configure(app)
     routes.configure(app)
     return app
-
 

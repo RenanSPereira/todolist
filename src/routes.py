@@ -1,6 +1,6 @@
 from flask import render_template, request, url_for, redirect
-from models import Todo
-from database import db
+from src.models import Todo
+from src.database import db
 
 def configure(app):
     
