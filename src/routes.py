@@ -22,5 +22,13 @@ def configure(app):
         db.session.delete(todo)
         db.session.commit()
         return redirect(url_for('index'))
-
+    
+    @app.route('/check/<id>')
+    def check(id):
+        todo = Todo.query.filter_by(id=int(id)).first()
+        todo.finished = True
+        db.session.add(todo)
+        db.session.commit()
+        return redirect(url_for('index'))
+        
     return app    
