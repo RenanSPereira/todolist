@@ -6,7 +6,7 @@ def configure(app):
     
     @app.route('/')
     def index():
-        todos = Todo.query.all()
+        todos = Todo.query.filter_by(finished=False).all()
         return render_template('index.html', todos=todos)
 
     @app.route('/add', methods=['POST'])
@@ -30,5 +30,5 @@ def configure(app):
         db.session.add(todo)
         db.session.commit()
         return redirect(url_for('index'))
-        
+
     return app    
