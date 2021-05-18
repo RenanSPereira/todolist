@@ -23,7 +23,8 @@ body {
   input[type=text] {
     margin-bottom: 2rem;
   }
-  input[type=checkbox], svg {
+  
+  svg {
     float: right;
     margin-right: 2rem;
   }
