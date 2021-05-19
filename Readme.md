@@ -1,5 +1,7 @@
 # TodoList
 
+![Image of Yaktocat](https://github.com/RenanSPereira/todolist/blob/master/todolist.png)
+
 Este projeto foi elaborado para fins de estudos, com intuito de exercitar o uso das seguintes ferramentas:
 Python, Flask, HTML5, CSS3, Bootstrap.
 
