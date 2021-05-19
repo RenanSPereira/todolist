@@ -7,7 +7,8 @@ def configure(app):
     @app.route('/')
     def index():
         todos = Todo.query.filter_by(finished=False).all()
-        return render_template('index.html', todos=todos)
+        qty = qty_completed()
+        return render_template('index.html', todos=todos, qty=qty)
 
     @app.route('/add', methods=['POST'])
     def add():
@@ -30,5 +31,9 @@ def configure(app):
         db.session.add(todo)
         db.session.commit()
         return redirect(url_for('index'))
+
+    def qty_completed():
+        qty = Todo.query.filter_by(finished=True).count()
+        return qty
 
     return app    
